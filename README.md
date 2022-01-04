@@ -1,2 +1,2 @@
 # Hawlaha
-A mobile application to organize my daily tasks without publicity
+A mobile application to organize my daily tasks without any publicity
