@@ -16,6 +16,7 @@ const App = () => {
           name="HomeScreen" 
           component={HomeScreen}  
           options={({navigation}) => ({
+            title: "Hawlaha by Macrotus",
             headerStyle: {
               backgroundColor: "#222f3e"
             },
@@ -33,7 +34,20 @@ const App = () => {
             ),
           })}
           />
-        <Stack.Screen name="TaskFormScreen" component={TaskFormScreen} />
+        <Stack.Screen name="TaskFormScreen" 
+          component={TaskFormScreen}
+          options={{
+            title: "Create a new task",
+            headerStyle: {
+              backgroundColor: "#222f3e"
+            },
+            headerTitleStyle: {
+              color: "#ffffff"
+            },
+            headerTintColor: "#ffffff",
+
+          }} 
+        />
 
       </Stack.Navigator>
     </NavigationContainer>
