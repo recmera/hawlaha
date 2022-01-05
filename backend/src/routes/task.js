@@ -2,12 +2,19 @@ import { Router } from 'express';
 import {deleteTask, getTask, getTaskCount, getTasks, saveTask, updateTask} from '../controllers/task' 
 
 const router = Router();
+/**
+ * @swagger
+ * tags:
+ *  name: Tasks
+ *  description: Tasks endpoints
+ */
 
 /**
  * @swagger
  * /tasks:
  *  get:
  *      summary: Get all tasks
+ *      tags: [Tasks]
  * 
  */
 router.get('/tasks', getTasks);
@@ -17,16 +24,16 @@ router.get('/tasks', getTasks);
  * /tasks/count:
  *  get:
  *      summary: Count all tasks
- * 
+ *      tags: [Tasks]
  */
 router.get('/tasks/count', getTaskCount);
 
 /**
  * @swagger
- * /tasks:/count
+ * /tasks/count
  *  get:
  *      summary: Get a task by his id
- * 
+ *      tags: [Tasks]  
  */
 router.get('/tasks/:id', getTask);
 
@@ -35,7 +42,7 @@ router.get('/tasks/:id', getTask);
  * /tasks:
  *  post:
  *      summary: Create a task
- * 
+ *      tags: [Tasks]
  */
 router.post('/tasks', saveTask);
 
@@ -44,7 +51,7 @@ router.post('/tasks', saveTask);
  * /tasks:
  *  delete:
  *      summary: remove a task by id
- * 
+ *      tags: [Tasks]
  */
 router.delete('/tasks/:id', deleteTask);
 
@@ -53,7 +60,7 @@ router.delete('/tasks/:id', deleteTask);
  * /tasks:
  *  put:
  *      summary: update the corpus of task by id
- * 
+ *      tags: [Tasks]  
  */
 router.put('/tasks/:id', updateTask);
 
