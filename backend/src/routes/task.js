@@ -1,19 +1,61 @@
 import { Router } from 'express';
 import {deleteTask, getTask, getTaskCount, getTasks, saveTask, updateTask} from '../controllers/task' 
 
-const router = Router()
+const router = Router();
 
-router.get('/tasks', getTasks)
+/**
+ * @swagger
+ * /tasks:
+ *  get:
+ *      summary: Get all tasks
+ * 
+ */
+router.get('/tasks', getTasks);
 
-router.get('/tasks/count', getTaskCount)
+/**
+ * @swagger
+ * /tasks/count:
+ *  get:
+ *      summary: Count all tasks
+ * 
+ */
+router.get('/tasks/count', getTaskCount);
 
-router.get('/tasks/:id', getTask)
+/**
+ * @swagger
+ * /tasks:/count
+ *  get:
+ *      summary: Get a task by his id
+ * 
+ */
+router.get('/tasks/:id', getTask);
 
-router.post('/tasks', saveTask)
+/**
+ * @swagger
+ * /tasks:
+ *  post:
+ *      summary: Create a task
+ * 
+ */
+router.post('/tasks', saveTask);
 
-router.delete('/tasks/:id', deleteTask)
+/**
+ * @swagger
+ * /tasks:
+ *  delete:
+ *      summary: remove a task by id
+ * 
+ */
+router.delete('/tasks/:id', deleteTask);
 
-router.put('/tasks/;id', updateTask)
+/**
+ * @swagger
+ * /tasks:
+ *  put:
+ *      summary: update the corpus of task by id
+ * 
+ */
+router.put('/tasks/:id', updateTask);
 
 
-export default router
+export default router;
