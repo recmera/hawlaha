@@ -30,7 +30,7 @@ router.get('/tasks/count', getTaskCount);
 
 /**
  * @swagger
- * /tasks/count
+ * /tasks/{id}:
  *  get:
  *      summary: Get a task by his id
  *      tags: [Tasks]  
@@ -48,7 +48,7 @@ router.post('/tasks', saveTask);
 
 /**
  * @swagger
- * /tasks:
+ * /tasks/{id}:
  *  delete:
  *      summary: remove a task by id
  *      tags: [Tasks]
@@ -57,7 +57,7 @@ router.delete('/tasks/:id', deleteTask);
 
 /**
  * @swagger
- * /tasks:
+ * /tasks/{id}:
  *  put:
  *      summary: update the corpus of task by id
  *      tags: [Tasks]  
