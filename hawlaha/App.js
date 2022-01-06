@@ -16,7 +16,7 @@ const App = () => {
           name="HomeScreen" 
           component={HomeScreen}  
           options={({navigation}) => ({
-            title: "Hawlaha by Macrotus",
+            title: "Create a task",
             headerStyle: {
               backgroundColor: "#222f3e"
             },

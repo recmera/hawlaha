@@ -4,6 +4,8 @@ import { saveTask, getTask, updateTask } from "../api";
 import Layout from "../components/Layout";
 
 const TaskFormScreen = ({ navigation, route }) => {
+  
+
   const [task, setTask] = useState({
     title: "",
     description: "",
@@ -26,6 +28,7 @@ const TaskFormScreen = ({ navigation, route }) => {
   }, []);
 
   const handleSubmit = async () => {
+    //console.log(task)
     try {
       if (!editing) {
         await saveTask(task);
